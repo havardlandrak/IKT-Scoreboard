@@ -3,9 +3,18 @@ import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import path from 'path';
+import cors from 'cors';
 
 // Create an instance of Express
 const app = express();
+
+// Set CORS
+const corsOptions = {
+  origin: 'https://havardlandrak.github.io/IKT-Scoreboard/', // Change to your allowed origin(s)
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Change to your allowed HTTP methods
+};
+
+app.use(cors(corsOptions));
 
 // Set up middleware
 app.use(bodyParser.urlencoded({ extended: false }));
