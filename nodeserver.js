@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Define MongoDB connection string (replace with your own)
-const mongoURI = 'mongodb://localhost:27017/IKTScoreboard';
+const uri = "mongodb+srv://havardlandrak:ve7CPOBxqnAccwIK@iktscoreboard.jaay6i8.mongodb.net/?retryWrites=true&w=majority";
 
 // Connect to MongoDB
 mongoose
